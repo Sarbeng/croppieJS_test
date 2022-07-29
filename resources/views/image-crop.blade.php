@@ -54,10 +54,11 @@ Crop Image Using jQuery Croppie with Ajax in Laravel
 <script>  
 $(document).ready(function(){
 $image_crop = $('#image_demo').croppie({
+
 enableExif: true,
 viewport: {
 width:200,
-height:200,
+height:250,
 type:'square' //circle
 },
 boundary:{
@@ -90,6 +91,7 @@ data: {'_token': $('meta[name="csrf-token"]').attr('content'), 'image': response
 success:function(data){
 $('#imageModel').modal('hide');
 alert('Crop image has been uploaded');
+location.reload();
 }
 })
 });
