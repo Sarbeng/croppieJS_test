@@ -28,8 +28,9 @@ Crop Image Using jQuery Croppie with Ajax in Laravel
 <div class="modal-dialog modal-lg">
 <div class="modal-content">
 <div class="modal-header">
-<button type="button" class="close" data-dismiss="modal">×</button>
+
 <h4 class="modal-title">Crop & Resize Upload Image in PHP with Ajax</h4>
+<button type="button" class="close" data-dismiss="modal">×</button>
 </div>
 <div class="modal-body">
 <div class="row">
@@ -56,8 +57,8 @@ $image_crop = $('#image_demo').croppie({
 enableExif: true,
 viewport: {
 width:200,
-height:400,
-type:'rectancgle' //circle
+height:200,
+type:'square' //circle
 },
 boundary:{
 width:300,
@@ -71,6 +72,7 @@ $image_crop.croppie('bind', {
 url: event.target.result
 }).then(function(){
 console.log('jQuery bind complete');
+$('.cr-slider').attr({'min':0, 'max':1.5000});
 });
 }
 reader.readAsDataURL(this.files[0]);
