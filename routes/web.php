@@ -22,3 +22,9 @@ use App\Http\Controllers\CropImageUploadController;
  
 Route::get('image-crop', [CropImageUploadController::class, 'index']);
 Route::post('save-crop-image', [CropImageUploadController::class, 'store']);
+
+
+use App\Http\Controllers\CropImageController;
+
+Route::get('crop-image-upload', [CropImageController::class, 'index']);
+Route::post('crop-image-upload', [CropImageController::class, 'uploadCropImage']);
